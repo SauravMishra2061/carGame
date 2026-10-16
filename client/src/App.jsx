@@ -1,5 +1,5 @@
 import { useCallback, useState } from 'react'
-import Game from './game/game.jsx'
+import Game from './game/Game.jsx'
 import './App.css'
 
 function App() {

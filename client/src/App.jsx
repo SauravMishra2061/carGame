@@ -1,5 +1,5 @@
 import { useCallback, useState } from 'react'
-import Game from './game/game'
+import Game from './game/game.jsx'
 import './App.css'
 
 function App() {
@@ -31,7 +31,8 @@ function App() {
           <p className="eyebrow">ARCADE DRIVE</p>
           <h1>CarGame</h1>
           <p className="landing-copy">
-            Dodge the traffic, switch lanes, and jump over cars to keep your run alive.
+            Dodge the traffic, switch lanes, and jump over cars to keep your run
+            alive.
           </p>
           <button className="primary-button" onClick={startGame}>
             Start Game
@@ -49,7 +50,12 @@ function App() {
           <Game key={gameKey} onCrash={handleCrash} />
           {gameOver && (
             <div className="game-over-backdrop" role="presentation">
-              <section className="game-over-card" role="dialog" aria-modal="true" aria-labelledby="crash-title">
+              <section
+                className="game-over-card"
+                role="dialog"
+                aria-modal="true"
+                aria-labelledby="crash-title"
+              >
                 <p className="eyebrow">RUN OVER</p>
                 <h2 id="crash-title">You crashed</h2>
                 <p className="final-score">Final score: {finalScore}</p>
